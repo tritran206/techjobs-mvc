@@ -27,5 +27,14 @@
         </div>
     </div>
 
+    <div th:fragment="display-jobs">
+        <table th:each="job : ${jobs}" class="job-listing">
+            <tr th:each="jobDetail : ${job}">
+                <td><span th:text="${jobDetail.key}"></span></td>
+                <td><a th:text="${jobDetail.value}"></a></td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
